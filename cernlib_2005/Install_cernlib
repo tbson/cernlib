@@ -79,9 +79,9 @@ echo "installing cernlib libraries"
 
 # Test the cernlib libraries
 
-echo "testing cernlib libraries"
+# echo "testing cernlib libraries"
 
-./Install_cernlib_test
+# ./Install_cernlib_test
 
 
 # Install the executables
