@@ -24,6 +24,37 @@ Usage
 Source `setup.sh`. This will setup the `CERN_LEVEL` and `CERN_ROOT` environment variables and add the binary 
 directory to your path.
 
+Installation
+------------
 
+# Prepare building tools
+```
+sudo apt-get install xorg-dev xutils-dev gfortran cernlib-base-dev cernlib-core-dev git
+sudo ln -s /usr/bin/make /usr/bin/gmake
+```
 
+# Download source code and build
+```
+cd ~/Downloads
+git clone https://github.com/tbson/cernlib.git
+cd cernlib
+./build.sh
+```
 
+# Copy compiled folder to safe place
+```
+sudo cp -r cernlib_2005/2005 /opt/cernlib
+```
+
+# Add these lines to bottom of ~/.profile
+```
+export CERN=/opt/cernlib
+export CERN_LEVEL=2005
+export CERN_ROOT=${CERN}/${CERN_LEVEL}
+export PATH=$CERN_ROOT/bin:$PATH
+```
+
+# Then source it
+```
+source ~/.profile
+```
