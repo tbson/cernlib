@@ -43,7 +43,8 @@ cd cernlib
 
 # Copy compiled folder to safe place
 ```
-sudo cp -r cernlib_2005/2005 /opt/cernlib
+sudo mkdir /opt/cernlib
+sudo cp -r cernlib_2005/2005 /opt/cernlib/
 ```
 
 # Add these lines to bottom of ~/.profile
